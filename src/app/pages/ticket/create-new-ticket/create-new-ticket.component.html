@@ -1,0 +1,52 @@
+<br>
+<br>
+<br>
+<form #postForm="ngForm" (ngSubmit)="save(f)" #f='ngForm'>
+
+  <div class="formcontainer">
+
+    <div class="form-group">
+      <label>Caller</label>
+
+      <mat-form-field appearance="fill" class="inputuser">
+        <input matInput class="form-control" [(ngModel)]="ticket.user" name="user" required>
+      </mat-form-field>
+
+      <mat-form-field class="select">
+        <label>Status</label>
+        <mat-select [(ngModel)]="ticket.status" name="status" required>
+          <mat-option *ngFor="let status of statusList" [value]="status">{{ status }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <br>
+    <label>Title</label>
+    <mat-form-field appearance="fill" class="inputtitle">
+      <input matInput class="form-control" [(ngModel)]="ticket.title" name="title" required>
+    </mat-form-field>
+
+    <div>
+      <label>Problem</label>
+      <mat-form-field appearance="fill" class="inputtxtarea">
+        <mat-label>Problem</mat-label>
+        <textarea matInput class="form-control" placeholder="Problem" [(ngModel)]="ticket.problem" name="problem"
+          required></textarea>
+      </mat-form-field>
+
+    </div>
+
+    <div>
+      <label>Solution</label>
+      <mat-form-field appearance="fill" class="inputtxtarea">
+        <mat-label>Solution</mat-label>
+        <textarea matInput class="form-control" placeholder="solution" [(ngModel)]="ticket.solution" name="solution"
+          required></textarea>
+      </mat-form-field>
+
+    </div>
+
+    <button mat-raised-button routerLink="/search-ticket" type="button" class="buttonmaterial">Cancel</button>
+    <button mat-raised-button type="submit" class="buttonmaterial">Save</button>
+
+  </div>
+</form>

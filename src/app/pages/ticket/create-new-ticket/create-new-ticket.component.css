@@ -1,0 +1,35 @@
+.formcontainer
+{
+    margin-left: 50px
+}
+
+.select
+{
+    margin-left: 20%;
+}
+
+.inputuser
+{
+    margin-left: 3%;
+}
+
+.inputtitle
+{
+    margin-left: 4%;
+}
+
+.inputtxtarea
+{
+    width:80%; margin-left: 2%; height:200px;
+}
+
+textarea
+{
+    width:100%; margin-left: 2%; height:100px;
+}
+
+.buttonmaterial
+{
+    background-color:lightgray; margin-right: 20%; float: right; width: 120px;
+   
+}
